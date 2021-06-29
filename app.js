@@ -1,4 +1,4 @@
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 // const fs = require('fs');
 // const generatePage = require('./src/page-template');
 // const pageHTML = generatePage(name, github);
@@ -8,4 +8,12 @@ const inquirer = require('inquirer');
 
 //   console.log('Portfolio complete! Check out index.html to see the output!');
 // });
-console.log(inquirer)
+inquirer
+  .prompt([
+    {
+      type: "input",
+      name: "name",
+      message: "What is your name?",
+    },
+  ])
+  .then((answers) => console.log(answers));

@@ -20,5 +20,12 @@ const writeFile = (fileContent) => {
   });
 };
 const copyFile = () => {
-  return new Promise((resolve, reject) => {});
+  return new Promise((resolve, reject) => {})
+    .then((copyFileResponse) => {
+      console.log(copyFileResponse);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
+module.exports = { writeFile, copyFile };
